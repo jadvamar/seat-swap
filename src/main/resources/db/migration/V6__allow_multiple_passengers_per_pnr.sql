@@ -1,0 +1,2 @@
+ALTER TABLE bookings
+DROP CONSTRAINT IF EXISTS ukmumifbrfh11nq6204aubv6dyr;

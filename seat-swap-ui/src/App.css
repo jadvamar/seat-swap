@@ -1,0 +1,554 @@
+
+/* =========================
+   Global
+========================= */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #f6f7fb;
+  color: #172033;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  transition: all 0.2s ease;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+
+/* =========================
+   Navbar
+========================= */
+
+.navbar {
+  height: 68px;
+  padding: 0 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: #ffffff;
+  border-bottom: 1px solid #e8ebf0;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.logo span {
+  font-weight: 400;
+}
+
+.nav-user {
+  color: #687386;
+  font-size: 14px;
+}
+
+
+/* =========================
+   Main container
+========================= */
+
+.container {
+  width: 920px;
+  max-width: 92%;
+  margin: 0 auto;
+}
+
+
+/* =========================
+   Hero
+========================= */
+
+.hero {
+  padding: 68px 0 38px;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: 48px;
+  line-height: 1.08;
+  letter-spacing: -1.5px;
+}
+
+.hero h1 span {
+  color: #5965f2;
+}
+
+.hero p {
+  margin: 18px 0 0;
+  max-width: 600px;
+
+  color: #687386;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+
+/* =========================
+   Common cards
+========================= */
+
+.booking-card,
+.booking-result {
+  background: #ffffff;
+  border: 1px solid #e5e8ee;
+  border-radius: 16px;
+  padding: 30px;
+
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.035);
+}
+
+.booking-card h2,
+.booking-result h2 {
+  margin: 0;
+  font-size: 21px;
+  letter-spacing: -0.3px;
+}
+
+.subtitle {
+  margin: 7px 0 0;
+  color: #687386;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+
+/* =========================
+   PNR Search
+========================= */
+
+.search-box {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.search-box input {
+  flex: 1;
+  min-width: 0;
+
+  padding: 14px 16px;
+
+  border: 1px solid #d9dee7;
+  border-radius: 9px;
+
+  background: #ffffff;
+  color: #172033;
+
+  outline: none;
+}
+
+.search-box input:focus {
+  border-color: #5965f2;
+  box-shadow: 0 0 0 3px rgba(89, 101, 242, 0.1);
+}
+
+.search-box button {
+  border: none;
+  border-radius: 9px;
+
+  padding: 14px 24px;
+
+  background: #5965f2;
+  color: white;
+
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.search-box button:hover,
+.swap-button:hover {
+  transform: translateY(-1px);
+  opacity: 0.94;
+}
+
+
+/* =========================
+   Booking Result
+========================= */
+
+.booking-result {
+  margin-top: 24px;
+}
+
+.result-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.result-header h2 {
+  margin-top: 3px;
+  font-size: 23px;
+}
+
+.label {
+  display: block;
+
+  margin-bottom: 6px;
+
+  color: #8993a4;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.1px;
+}
+
+.status {
+  display: inline-flex;
+  align-items: center;
+
+  padding: 6px 11px;
+
+  border-radius: 20px;
+
+  background: #e8f7ed;
+  color: #218542;
+
+  font-size: 11px;
+  font-weight: 700;
+}
+
+
+/* =========================
+   Passenger list
+========================= */
+
+.passenger-list {
+  margin-top: 24px;
+}
+
+.seat-option {
+  display: grid;
+  grid-template-columns: 1.5fr 0.7fr 0.9fr 0.9fr auto;
+  gap: 18px;
+  align-items: center;
+
+  padding: 20px;
+
+  margin-top: 10px;
+
+  border: 1px solid #e6e9ef;
+  border-radius: 12px;
+
+  background: #ffffff;
+
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.seat-option:hover {
+  border-color: #cfd5e1;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.035);
+}
+
+.seat-option strong {
+  display: block;
+
+  color: #172033;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+
+/* =========================
+   Swap button
+========================= */
+
+.swap-button {
+  width: auto;
+
+  border: none;
+  border-radius: 8px;
+
+  padding: 11px 16px;
+
+  background: #5965f2;
+  color: white;
+
+  cursor: pointer;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  white-space: nowrap;
+}
+
+
+/* =========================
+   Swap Section
+========================= */
+
+.swap-section {
+  margin-top: 30px;
+  padding-top: 28px;
+
+  border-top: 1px solid #edf0f4;
+}
+
+.swap-section h3 {
+  margin: 0 0 7px;
+
+  font-size: 17px;
+  letter-spacing: -0.2px;
+}
+
+.swap-section > .subtitle {
+  margin-bottom: 28px;
+}
+
+
+/* =========================
+   Swap Options
+========================= */
+
+.swap-section .seat-option {
+  grid-template-columns: 1fr 1fr 1.3fr auto;
+
+  margin-top: 10px;
+
+  background: #fafbfe;
+}
+
+.swap-section .seat-option:hover {
+  background: #ffffff;
+  border-color: #cbd1ff;
+}
+
+
+/* =========================
+   Incoming Requests
+========================= */
+
+.incoming-button {
+  margin-top: 22px;
+
+  border: none;
+  border-radius: 9px;
+
+  padding: 13px 20px;
+
+  background: #172033;
+  color: white;
+
+  cursor: pointer;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.incoming-button:hover {
+  background: #252f45;
+}
+
+
+/* =========================
+   Request Cards
+========================= */
+
+.request-card {
+  margin-top: 12px;
+  padding: 20px;
+
+  border: 1px solid #e5e8ee;
+  border-radius: 12px;
+
+  background: #ffffff;
+
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr auto;
+
+  gap: 20px;
+  align-items: center;
+}
+
+.request-card strong {
+  display: block;
+
+  color: #172033;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.request-card > div:last-child {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+
+/* =========================
+   Accept button
+========================= */
+
+.accept-button {
+  border: none;
+  border-radius: 8px;
+
+  padding: 10px 16px;
+
+  background: #218542;
+  color: white;
+
+  cursor: pointer;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.accept-button:hover {
+  opacity: 0.9;
+}
+
+
+/* =========================
+   Mobile
+========================= */
+
+@media (max-width: 760px) {
+
+  .navbar {
+    padding: 0 5%;
+  }
+
+  .container {
+    max-width: 92%;
+  }
+
+  .hero {
+    padding: 48px 0 30px;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .search-box {
+    flex-direction: column;
+  }
+
+  .search-box button {
+    width: 100%;
+  }
+
+  .booking-card,
+  .booking-result {
+    padding: 22px;
+  }
+
+  .seat-option,
+  .swap-section .seat-option {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .seat-option .swap-button {
+    grid-column: 1 / -1;
+    width: 100%;
+  }
+
+  .request-card {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .request-card > div:last-child {
+    align-items: flex-start;
+  }
+}
+
+
+@media (max-width: 480px) {
+
+  .hero h1 {
+    font-size: 31px;
+  }
+
+  .nav-user {
+    display: none;
+  }
+
+  .result-header {
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .seat-option,
+  .swap-section .seat-option,
+  .request-card {
+    grid-template-columns: 1fr;
+  }
+
+  .request-card > div:last-child {
+    align-items: flex-start;
+  }
+}
+
+.auth-container {
+  width: 350px;
+  margin: 80px auto;
+  padding: 30px;
+  text-align: center;
+}
+
+.auth-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.auth-container input {
+  padding: 12px;
+  font-size: 16px;
+}
+
+.auth-container form button {
+  padding: 12px;
+  cursor: pointer;
+}
+
+.auth-switch {
+  margin-top: 20px;
+}
+
+.auth-switch button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.nav-user {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logout-button {
+  padding: 8px 14px;
+  cursor: pointer;
+}
+
+.success-message {
+  margin: 20px 0;
+  padding: 14px 18px;
+  border-radius: 8px;
+  background: #e8f5e9;
+  color: #2e7d32;
+  border: 1px solid #a5d6a7;
+  font-weight: 600;
+}
